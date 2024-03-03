@@ -1,3 +1,6 @@
+# https://www.acmicpc.net/problem/1010
+# Combination을 이용하여 풀이
+
 import sys
 import math
 
