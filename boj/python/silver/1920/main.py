@@ -4,7 +4,4 @@ M = int(input())
 finding_list = list(map(int, input().split()))
 
 for num in finding_list:
-    if num in base_list:
-        print(1)
-    else:
-        print(0)
+    print(1) if num in base_list else print(0)
