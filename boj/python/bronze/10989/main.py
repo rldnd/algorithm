@@ -1,8 +1,12 @@
 import sys
 
 N = int(input())
-numbers = list(map(int, sys.stdin.readlines()))
-numbers.sort()
-for number in numbers:
-    print(number)
-    
+
+count = [0] * 10001
+for i in range(N):
+    input_num = int(sys.stdin.readline())
+    count[input_num] += 1
+
+for i in range(len(count)):
+    for j in range(count[i]):
+        print(i)

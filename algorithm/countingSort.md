@@ -29,11 +29,16 @@ N = len(A)
 
 # 0으로 초기화된 입력될 MAX_NUM+1 길이의 배열 count를 생성
 count = [0] * (MAX_NUM + 1)
-# countSum은 누적 합을 저장하는 배열
+# count_sum은 누적 합을 저장하는 배열
 # 누적 합은 특정 숫자가 결과 수열 B에 들어갈 index를 표현한다고 생각하면 된다.
 count_sum = [0] * (MAX_NUM + 1)
 
 # 숫자 등장 횟수 세기
+for i in range(0, N):
+  count[A[i]] += 1
+
+# 숫자 등장 횟수 누적합 구하기
+count_sum[0] = count[0]
 for i in range(1, MAX_NUM + 1):
   count_sum[i] = count_sum[i - 1] + count[i]
 
