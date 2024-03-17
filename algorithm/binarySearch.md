@@ -27,14 +27,14 @@ left > right가 될 때까지 계속 반복하기
 ```py
 def binary_search(target, data):
     data.sort()
-    start = 0 			# 맨 처음 위치
-    end = len(data) - 1 	# 맨 마지막 위치
+    start = 0    # 맨 처음 위치
+    end = len(data) - 1  # 맨 마지막 위치
 
     while start <= end:
         mid = (start + end) // 2 # 중간값
 
         if data[mid] == target:
-            return mid 		# target 위치 반환
+            return mid   # target 위치 반환
 
         elif data[mid] > target: # target이 작으면 왼쪽을 더 탐색
             end = mid - 1
@@ -47,12 +47,12 @@ def binary_search(target, data):
 
 ```py
 def binary_search(target, start, end):
-    if start > end:		 # 범위를 넘어도 못찾는다면 -1을 반환
+    if start > end:   # 범위를 넘어도 못찾는다면 -1을 반환
         return -1
 
     mid = (start + end) // 2  # 중간값
 
-    if data[mid] == target:	# 중간값의 데이터가 target과 같다면 mid를 반환
+    if data[mid] == target: # 중간값의 데이터가 target과 같다면 mid를 반환
         return mid
     elif data[mid] > target: # target이 작으면 왼쪽 탐색
         end = mid - 1
