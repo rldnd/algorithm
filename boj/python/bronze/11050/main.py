@@ -1,4 +1,5 @@
-from itertools import combinations
+import sys
+from math import factorial
+[total, grab] = list(map(int, sys.stdin.readline().split()))
 
-lst = list(map(int, input().split()))
-print(len(list(combinations(range(lst[0]), lst[1]))))
+print(factorial(total) // (factorial(total - grab) * factorial(grab)))
