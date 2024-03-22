@@ -1,4 +1,4 @@
-# MEMO: dynamic programming
+# MEMO: dynamic programming ( 점화식을 만들자 )
 
 zero_count = [0] * 41
 one_count = [0] * 41
