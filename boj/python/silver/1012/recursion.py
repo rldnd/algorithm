@@ -1,5 +1,3 @@
-# TODO: DFS, BFS 이용해서 풀이
-
 import sys
 readline = sys.stdin.readline
 sys.setrecursionlimit(10**6)
